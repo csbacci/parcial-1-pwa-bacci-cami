@@ -1,21 +1,21 @@
 const pokemonDetalles = document.getElementById('pokemonDetail');
 const parametros = new URLSearchParams(window.location.search);
-const pokemonNombre = parametros.get('nombre');
+const pokemonNombre = parametros.get('name');
 
 // Función para obtener y mostrar los detalles del Pokémon seleccionado
-async function pokemonDetalles(nombre) {
+async function fetchPokemonDetalles(name) {
     try {
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
         const data = await response.json();
-        pokemonDetail.innerHTML = `
-            <h2>${data.nombre}</h2>
-            <img src="${data.sprites.front_default}" alt="${data.nombre}">
+        pokemonDetalles.innerHTML = `
+            <h2>${data.name}</h2>
+            <img src="${data.sprites.front_default}" alt="${data.name}">
             <p>Altura: ${data.height}</p>
             <p>Peso: ${data.weight}</p>
         `;
     } catch (error) {
-        console.error('Error encontrando la API:', error);
+        console.error('Error fetching pokemon details:', error);
     }
 }
 
-pokemonDetalles(pokemonNombre);
+fetchPokemonDetalles(pokemonNombre);
