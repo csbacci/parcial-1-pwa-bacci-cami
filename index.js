@@ -1,4 +1,4 @@
-const pokemonList = document.getElementById('pokemonList');
+const pokemonList = document.getElementById('pokemonLista');
 
 // Función para obtener los primeros 100 Pokémon de la API
 async function fetchPokemons() {
