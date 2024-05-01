@@ -10,8 +10,8 @@ async function pokemonDetalles(nombre) {
         pokemonDetail.innerHTML = `
             <h2>${data.nombre}</h2>
             <img src="${data.sprites.front_default}" alt="${data.nombre}">
-            <p>Height: ${data.height}</p>
-            <p>Weight: ${data.weight}</p>
+            <p>Altura: ${data.height}</p>
+            <p>Peso: ${data.weight}</p>
         `;
     } catch (error) {
         console.error('Error encontrando la API:', error);
