@@ -1,18 +1,62 @@
-/* Estilos para las páginas */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
-h1 {
-    text-align: center;
+h1{
+    margin: 1rem;
+    padding-top: 1rem;
 }
 
-#pokemonLista {
+#pokemonList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+header {
+    text-align: center;
+    color: white;
+    background-color: #0F224A;
+    padding: 1rem;
+    margin-bottom: 0;
+}
+
+main {
+    background-color: #77ADA6;
+    margin-top: 0;
+}
+
+.img-logo {
+    max-width: 100px;
+}
+
+
+a {
+    color: whitesmoke; /* Hereda el color del texto del contenedor padre */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Estilos para los enlaces cuando están siendo activados */
+a:hover, a:active {
+    color: inherit; /* Hereda el color del texto del contenedor padre */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+footer {
+    background-color: #0F224A;
+    padding: 1rem;
+    color: white;
+}
+
+.detalle {
+    margin-left: 1rem;
+    padding: 1rem;
+    color: white;
+}
+
+.img {
+    width: 10%;
+    margin: 0;
+    padding: 0;
 }
