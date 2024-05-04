@@ -9,9 +9,9 @@ async function fetchPokemonDetalles(name) {
         const data = await response.json();
         pokemonDetalles.innerHTML = `
             <h2>${data.name}</h2>
-            <img src="${data.sprites.front_default}" alt="${data.name}">
-            <p>Altura: ${data.height}</p>
-            <p>Peso: ${data.weight}</p>
+            <img class="img img-fluid" src="${data.sprites.front_default}" alt="${data.name}">
+            <p>Altura: ${data.height} cm.</p>
+            <p>Peso: ${data.weight} kg.</p>
         `;
     } catch (error) {
         console.error('Error fetching pokemon details:', error);
